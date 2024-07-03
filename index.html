@@ -329,54 +329,52 @@
         /* Mission Section Specific Styles */
         #mission {
             display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
+            flex-direction: row; /* Default to row for larger screens */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
             padding: 40px;
             background-color: #1f1f1f; /* Dark background for mission section */
             color: #ffffff;
             margin-top: 20px; /* Add margin from previous section */
+            text-align: center; /* Center text */
         }
 
         #mission-text {
             flex: 1;
-            padding-right: 20px; /* Adjust spacing between text and image */
+            max-width: 800px; /* Limit width for better readability */
+            padding: 0 20px; /* Add some padding for better appearance */
+            text-align: center; /* Center text */
         }
 
+        /* Mission Section Image Styles */
         #mission-image {
             flex: 1;
             max-width: 100%; /* Ensure the image container doesn't exceed its parent's width */
+            margin-left: 20px; /* Add some space between text and image */
         }
 
         #mission-image img {
             width: 100%; /* Make the image responsive */
             height: auto; /* Maintain aspect ratio */
-            margin-left: 0; /* Reset margin for small screens */
+            border-radius: 15px; /* Add rounded edges */
         }
 
         /* Media Queries for Mission Section */
-
-        /* Medium screens */
         @media only screen and (max-width: 1199px) {
             #mission {
-                flex-direction: column;
-            }
-
-            #mission-text {
-                padding-right: 0;
+                flex-direction: column; /* Change to column for vertical centering */
             }
 
             #mission-image {
-                margin-top: 20px; /* Add margin to the top for spacing */
+                display: none; /* Hide the image on smaller screens */
             }
         }
-
         /* Small screens */
-@media only screen and (max-width: 767px) {
-        .menu-icon {
-        display: block; /* Show menu icon on small screens */
-        cursor: pointer;
-    }
+        @media only screen and (max-width: 767px) {
+            .menu-icon {
+            display: block; /* Show menu icon on small screens */
+            cursor: pointer;
+        }
 
     nav {
         display: none; /* Hide nav links by default on small screens */
@@ -552,7 +550,7 @@
             <p>Together, we can empower the next generation with the tools they need to succeed in a digital world. Thank you for considering a partnership with ReCompute.</p>
         </div>
         <div id="mission-image">
-            <!-- <img src="Photos/StockOfPhotoOnComputer.jpg" alt="Mission Image"> -->
+            <img src="Photos\MissionPhoto.jpg" alt="Mission Image">
         </div>
     </section>
     
@@ -580,10 +578,10 @@
         <p>Have questions or want to get involved? Reach out to us on our social media platforms!</p>
         <div class="social-icons">
             <a href="mailto:recompute24@gmail.com" target="_blank" class="social-icon">
-                <img src="Photos/GmailIcon-Cropped.png" alt="Gmail">
+                <img src="Photos/GmailIMG.png" alt="Gmail">
             </a>
             <a href="https://www.instagram.com/recompute.donations" target="_blank" class="social-icon">
-                <img src="Photos/InstaIcon-Cropped2.png" alt="Instagram">
+                <img src="Photos/InstaICON.png" alt="Instagram">
             </a>
         </div>
     </section>
